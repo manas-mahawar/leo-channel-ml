@@ -1,0 +1,40 @@
+
+# Python environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Raw and generated datasets
+data/raw/
+data/india/
+data/processed/
+results/
+
+# Trained models and scalers
+*.keras
+*.h5
+*.pkl
+*.joblib
+
+# Secrets
+.env
+.env.*
+!.env.example
+.cdsapirc
+
+# Local editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Compiled C++ test artifacts
+compiler_test.exe
+
+# Generated training arrays
+*.npy
+
+# Generated experiment outputs
+*.csv
+*.nc
+*.zip
