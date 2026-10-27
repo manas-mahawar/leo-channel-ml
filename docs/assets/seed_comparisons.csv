@@ -1,0 +1,5 @@
+comparison,metric,seeds,differences,mean_difference,std_difference,same_sign_all_seeds
+multitask_fig1heads - multitask,EPL_RMSE_dB,1 2 42,-0.0205 -0.0245 -0.0263,-0.02378713607852338,0.0029889803786445164,True
+multitask - epl_only,EPL_RMSE_dB,1 2 42,-0.0011 -0.0104 -0.0060,-0.005849119267895664,0.004626993900581147,True
+no_itu - multitask,EPL_RMSE_dB,1 2 42,+0.0045 -0.0017 -0.0034,-0.0002136003715129675,0.0041518459629400085,False
+multitask_fig1heads - multitask,EPL_RMSE_hour1_dB,1 2 42,-0.0620 -0.0643 -0.0666,-0.0642980053383408,0.0022787424097827544,True

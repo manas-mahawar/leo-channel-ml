@@ -1,0 +1,641 @@
+{
+  "passed": 127,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "multitask: all run files present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask: run_config best_epoch/epochs match training_log",
+      "status": "PASS",
+      "detail": "best 14, epochs 20, seed 42"
+    },
+    {
+      "check": "multitask: early stopping consistent (patience 6 or max epochs)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask: predictions finite, one row per test window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_itu: all run files present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_itu: run_config best_epoch/epochs match training_log",
+      "status": "PASS",
+      "detail": "best 18, epochs 24, seed 42"
+    },
+    {
+      "check": "no_itu: early stopping consistent (patience 6 or max epochs)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_itu: predictions finite, one row per test window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "epl_only: all run files present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "epl_only: run_config best_epoch/epochs match training_log",
+      "status": "PASS",
+      "detail": "best 13, epochs 19, seed 42"
+    },
+    {
+      "check": "epl_only: early stopping consistent (patience 6 or max epochs)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "epl_only: predictions finite, one row per test window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "weather_only: all run files present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "weather_only: run_config best_epoch/epochs match training_log",
+      "status": "PASS",
+      "detail": "best 12, epochs 18, seed 42"
+    },
+    {
+      "check": "weather_only: early stopping consistent (patience 6 or max epochs)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "weather_only: predictions finite, one row per test window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_msl: all run files present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_msl: run_config best_epoch/epochs match training_log",
+      "status": "PASS",
+      "detail": "best 16, epochs 22, seed 42"
+    },
+    {
+      "check": "multitask_msl: early stopping consistent (patience 6 or max epochs)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_msl: predictions finite, one row per test window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "minute_multitask: all run files present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "minute_multitask: run_config best_epoch/epochs match training_log",
+      "status": "PASS",
+      "detail": "best 30, epochs 36, seed 42"
+    },
+    {
+      "check": "minute_multitask: early stopping consistent (patience 6 or max epochs)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "minute_multitask: predictions finite, one row per test window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_fig1heads: all run files present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_fig1heads: run_config best_epoch/epochs match training_log",
+      "status": "PASS",
+      "detail": "best 16, epochs 22, seed 42"
+    },
+    {
+      "check": "multitask_fig1heads: early stopping consistent (patience 6 or max epochs)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_fig1heads: predictions finite, one row per test window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask: recomputed metrics equal metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask: per-city RMSE equals table7_rmse_multitask.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_itu: recomputed metrics equal metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_itu: per-city RMSE equals table7_rmse_no_itu.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "epl_only: recomputed metrics equal metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "epl_only: per-city RMSE equals table7_rmse_epl_only.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "weather_only: recomputed metrics equal metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_msl: recomputed metrics equal metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_msl: per-city RMSE equals table7_rmse_multitask_msl.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "minute_multitask: recomputed metrics equal metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "minute_multitask: per-city RMSE equals table7_rmse_minute_multitask.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_fig1heads: recomputed metrics equal metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "multitask_fig1heads: per-city RMSE equals table7_rmse_multitask_fig1heads.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "paper: persistence RMSE recomputed",
+      "status": "PASS",
+      "detail": "1.0420"
+    },
+    {
+      "check": "paper_minute: persistence RMSE recomputed",
+      "status": "PASS",
+      "detail": "0.0329"
+    },
+    {
+      "check": "paper_minute: linear-extrapolation RMSE recomputed",
+      "status": "PASS",
+      "detail": "0.0133"
+    },
+    {
+      "check": "paper: weather inverse transform equals raw targets",
+      "status": "PASS",
+      "detail": "max diff 3.81e-06"
+    },
+    {
+      "check": "paper: weather scaler fitted on training targets (mean 0, std 1)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "paper_msl: weather inverse transform equals raw targets",
+      "status": "PASS",
+      "detail": "max diff 3.81e-06"
+    },
+    {
+      "check": "paper_msl: weather scaler fitted on training targets (mean 0, std 1)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "paper_minute: weather inverse transform equals raw targets",
+      "status": "PASS",
+      "detail": "max diff 7.63e-06"
+    },
+    {
+      "check": "paper_minute: weather scaler fitted on training targets (mean 0, std 1)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Table 9 equals recomputation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Table 10 equals recomputation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Table 7 overall equals recomputation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all_models_summary equals recomputation",
+      "status": "PASS",
+      "detail": "6 rows"
+    },
+    {
+      "check": "tables.md shows the recomputed RMSEs",
+      "status": "PASS",
+      "detail": "['0.936', '0.942', '0.933']"
+    },
+    {
+      "check": "unseen_multitask: summary = mean of per-city rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unseen_multitask_msl: summary = mean of per-city rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unseen_multitask_fig1heads: summary = mean of per-city rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/epl_only_seed1: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/epl_only_seed1: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9415"
+    },
+    {
+      "check": "seeds/epl_only_seed2: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/epl_only_seed2: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9537"
+    },
+    {
+      "check": "seeds/multitask_fig1heads_seed1: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/multitask_fig1heads_seed1: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9199"
+    },
+    {
+      "check": "seeds/multitask_fig1heads_seed2: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/multitask_fig1heads_seed2: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9188"
+    },
+    {
+      "check": "seeds/multitask_seed1: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/multitask_seed1: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9404"
+    },
+    {
+      "check": "seeds/multitask_seed2: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/multitask_seed2: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9433"
+    },
+    {
+      "check": "seeds/no_itu_seed1: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/no_itu_seed1: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9449"
+    },
+    {
+      "check": "seeds/no_itu_seed2: complete, seed recorded in folder name and config",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "seeds/no_itu_seed2: RMSE equals seed_runs.csv",
+      "status": "PASS",
+      "detail": "0.9415"
+    },
+    {
+      "check": "figure ablations: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure ablations: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure baselines_and_conditions: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure baselines_and_conditions: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure calibration: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure calibration: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure dataset_components: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure dataset_epl_hist: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure dataset_sampling: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure error_vs_horizon: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure error_vs_horizon: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig1_architecture: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig2_pipeline: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig3_pred_vs_true: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig3_pred_vs_true: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig4_city_timeseries_hour1: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig4_city_timeseries_hour1: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig4_horizon_timeseries: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig4_horizon_timeseries: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig4b_horizon_examples: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig4b_horizon_examples: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig5_unseen_cities: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig5_unseen_cities: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig5_unseen_cities_multitask_msl: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig5_unseen_cities_multitask_msl: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig6_error_by_region: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig6_error_by_region: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig6_error_by_region_multitask_msl: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig6_error_by_region_multitask_msl: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig7_unseen_map: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig7_unseen_map: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig7_unseen_map_multitask_msl: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig7_unseen_map_multitask_msl: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure minute_experiment: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure minute_experiment: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure msl_vs_surface_unseen: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure msl_vs_surface_unseen: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure residuals: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure residuals: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure rmse_by_city_and_hour: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure rmse_by_city_and_hour: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure rmse_mae_by_city: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure rmse_mae_by_city: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure seed_variation: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure seed_variation: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure training_curves: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure training_curves: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure unseen_timeseries: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure unseen_timeseries: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure unseen_timeseries_multitask_msl: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure unseen_timeseries_multitask_msl: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure weather_head_rmse: PDF from the same run",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure weather_head_rmse: newer than metrics_test.json",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

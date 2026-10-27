@@ -1,0 +1,255 @@
+{
+  "protocol": "causal_hourly_v1",
+  "input_frequency": "1h",
+  "input_steps": 60,
+  "target_frequency": "1h",
+  "horizon_steps": 5,
+  "horizon_unit": "hours",
+  "measured_minute_data": false,
+  "source_resolution": "hourly ERA5 reanalysis (Open-Meteo archive) and ITU-R labels computed from it",
+  "interpolation": "none",
+  "missing_values": "windows with a missing input or target row are excluded",
+  "created_utc": "2026-10-26T21:55:48+00:00",
+  "created_by": "evaluation/evaluate_causal_baselines.py",
+  "cities": [
+    "Athens",
+    "Bergen",
+    "Budapest",
+    "Chilbolton",
+    "Vigo",
+    "Warsaw"
+  ],
+  "features": [
+    "latitude",
+    "longitude",
+    "temperature_C",
+    "relative_humidity_percent",
+    "pressure_hPa",
+    "precipitation_mm",
+    "cloud_cover_percent",
+    "gas_mean",
+    "gas_std",
+    "cloud_mean",
+    "cloud_std",
+    "rain_mean",
+    "rain_std",
+    "elevation_deg"
+  ],
+  "target": "epl_dB",
+  "split": "chronological 70/15/15 of each city's usable hourly origins; the next split's first input row is after the previous split's last target row",
+  "split_boundaries": {
+    "Athens": {
+      "train": {
+        "first_origin": "2020-01-04 10:00:00",
+        "last_origin": "2023-07-03 18:00:00",
+        "origins": 30633,
+        "first_input_row_time": "2020-01-01 23:00:00",
+        "last_target_time": "2023-07-03 23:00:00"
+      },
+      "val": {
+        "first_origin": "2023-07-06 11:00:00",
+        "last_origin": "2024-04-02 06:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2023-07-04 00:00:00",
+        "last_target_time": "2024-04-02 11:00:00"
+      },
+      "test": {
+        "first_origin": "2024-04-04 23:00:00",
+        "last_origin": "2024-12-31 18:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2024-04-02 12:00:00",
+        "last_target_time": "2024-12-31 23:00:00"
+      }
+    },
+    "Bergen": {
+      "train": {
+        "first_origin": "2020-01-04 10:00:00",
+        "last_origin": "2023-07-03 18:00:00",
+        "origins": 30633,
+        "first_input_row_time": "2020-01-01 23:00:00",
+        "last_target_time": "2023-07-03 23:00:00"
+      },
+      "val": {
+        "first_origin": "2023-07-06 11:00:00",
+        "last_origin": "2024-04-02 06:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2023-07-04 00:00:00",
+        "last_target_time": "2024-04-02 11:00:00"
+      },
+      "test": {
+        "first_origin": "2024-04-04 23:00:00",
+        "last_origin": "2024-12-31 18:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2024-04-02 12:00:00",
+        "last_target_time": "2024-12-31 23:00:00"
+      }
+    },
+    "Budapest": {
+      "train": {
+        "first_origin": "2020-01-04 10:00:00",
+        "last_origin": "2023-07-03 18:00:00",
+        "origins": 30633,
+        "first_input_row_time": "2020-01-01 23:00:00",
+        "last_target_time": "2023-07-03 23:00:00"
+      },
+      "val": {
+        "first_origin": "2023-07-06 11:00:00",
+        "last_origin": "2024-04-02 06:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2023-07-04 00:00:00",
+        "last_target_time": "2024-04-02 11:00:00"
+      },
+      "test": {
+        "first_origin": "2024-04-04 23:00:00",
+        "last_origin": "2024-12-31 18:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2024-04-02 12:00:00",
+        "last_target_time": "2024-12-31 23:00:00"
+      }
+    },
+    "Chilbolton": {
+      "train": {
+        "first_origin": "2020-01-04 10:00:00",
+        "last_origin": "2023-07-03 18:00:00",
+        "origins": 30633,
+        "first_input_row_time": "2020-01-01 23:00:00",
+        "last_target_time": "2023-07-03 23:00:00"
+      },
+      "val": {
+        "first_origin": "2023-07-06 11:00:00",
+        "last_origin": "2024-04-02 06:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2023-07-04 00:00:00",
+        "last_target_time": "2024-04-02 11:00:00"
+      },
+      "test": {
+        "first_origin": "2024-04-04 23:00:00",
+        "last_origin": "2024-12-31 18:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2024-04-02 12:00:00",
+        "last_target_time": "2024-12-31 23:00:00"
+      }
+    },
+    "Vigo": {
+      "train": {
+        "first_origin": "2020-01-04 10:00:00",
+        "last_origin": "2023-07-03 18:00:00",
+        "origins": 30633,
+        "first_input_row_time": "2020-01-01 23:00:00",
+        "last_target_time": "2023-07-03 23:00:00"
+      },
+      "val": {
+        "first_origin": "2023-07-06 11:00:00",
+        "last_origin": "2024-04-02 06:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2023-07-04 00:00:00",
+        "last_target_time": "2024-04-02 11:00:00"
+      },
+      "test": {
+        "first_origin": "2024-04-04 23:00:00",
+        "last_origin": "2024-12-31 18:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2024-04-02 12:00:00",
+        "last_target_time": "2024-12-31 23:00:00"
+      }
+    },
+    "Warsaw": {
+      "train": {
+        "first_origin": "2020-01-04 10:00:00",
+        "last_origin": "2023-07-03 18:00:00",
+        "origins": 30633,
+        "first_input_row_time": "2020-01-01 23:00:00",
+        "last_target_time": "2023-07-03 23:00:00"
+      },
+      "val": {
+        "first_origin": "2023-07-06 11:00:00",
+        "last_origin": "2024-04-02 06:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2023-07-04 00:00:00",
+        "last_target_time": "2024-04-02 11:00:00"
+      },
+      "test": {
+        "first_origin": "2024-04-04 23:00:00",
+        "last_origin": "2024-12-31 18:00:00",
+        "origins": 6500,
+        "first_input_row_time": "2024-04-02 12:00:00",
+        "last_target_time": "2024-12-31 23:00:00"
+      }
+    }
+  },
+  "excluded_origins": {
+    "Athens": {
+      "no_complete_history_or_missing_input": 23,
+      "missing_target_or_baseline_value": 0
+    },
+    "Bergen": {
+      "no_complete_history_or_missing_input": 23,
+      "missing_target_or_baseline_value": 0
+    },
+    "Budapest": {
+      "no_complete_history_or_missing_input": 23,
+      "missing_target_or_baseline_value": 0
+    },
+    "Chilbolton": {
+      "no_complete_history_or_missing_input": 23,
+      "missing_target_or_baseline_value": 0
+    },
+    "Vigo": {
+      "no_complete_history_or_missing_input": 23,
+      "missing_target_or_baseline_value": 0
+    },
+    "Warsaw": {
+      "no_complete_history_or_missing_input": 23,
+      "missing_target_or_baseline_value": 0
+    }
+  },
+  "scaling": {
+    "policy": "global StandardScaler fitted on training input rows only (not used by the baselines)",
+    "mean": [
+      48.58136666666665,
+      9.824050000000002,
+      12.469545266953384,
+      75.02818867022894,
+      1007.4129219340547,
+      0.12309722403232114,
+      59.484979799296234,
+      0.7692701390177,
+      0.04042614401270601,
+      0.1417655082423075,
+      0.09110856882380683,
+      0.3178077340433198,
+      0.39213960400136466,
+      30.0
+    ],
+    "scale": [
+      7.2230381100260646,
+      12.20931745713767,
+      7.846592607331067,
+      17.47821695311955,
+      10.551407148497267,
+      0.40785529778810103,
+      38.67933856015101,
+      0.12094135746077855,
+      0.028584144436551506,
+      0.18153506238726647,
+      0.09200292848161219,
+      0.969459611553021,
+      0.6366410151660175,
+      1.0
+    ]
+  },
+  "random_seed": 42,
+  "randomness": "none (all origins used, deterministic order)",
+  "baselines": {
+    "persistence": "y_hat(t+k) = y(t)",
+    "linear_extrapolation": "y_hat(t+k) = y(t) + k (y(t) - y(t-1))",
+    "recent_mean_24h": "y_hat(t+k) = mean(y(t-23..t))",
+    "k": "1..5 hours"
+  },
+  "minute_leak_comparison": "test anchors of data_pipeline/minute_full_source.py (5-minute stride); targets are linearly interpolated minute values (estimates, not observations); leaky inputs use interpolated EPL at the anchor (needs hour h+1), causal inputs hold hour h",
+  "limitations": [
+    "ERA5 is retrospective reanalysis: causal in time, not operationally available in real time",
+    "labels are ITU-R model outputs from reanalysis weather, not link measurements",
+    "no measured minute data exist; minute values are interpolated or held hourly values"
+  ]
+}

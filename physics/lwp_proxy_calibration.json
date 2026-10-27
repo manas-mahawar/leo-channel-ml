@@ -1,0 +1,23 @@
+{
+  "formula": "LWP = a*clip((RH-RH_c)/(100-RH_c),0,1) + b*precip_mm  [kg/m^2]",
+  "rh_c_percent": 65,
+  "a_kg_m2": 0.10069444883163851,
+  "b_kg_m2_per_mm": 0.14375559683484124,
+  "fit_period": "< 2023-01-01",
+  "fit_hours": 36504,
+  "fit_cities": [
+    "Athens",
+    "Bergen"
+  ],
+  "fit_r2": 0.40582508975464116,
+  "heldout_period": ">= 2023-01-01",
+  "heldout_hours": 17544,
+  "heldout_cities": [
+    "Athens"
+  ],
+  "heldout_r2": -0.005794689032269318,
+  "heldout_corr": 0.3777605919215615,
+  "heldout_mean_true": 0.023467110469937325,
+  "heldout_mean_pred": 0.020359394395531645,
+  "note": "Our proxy, not the paper's (unpublished) formula."
+}

@@ -1,0 +1,23 @@
+# Dependencies of the replication pipeline (data_pipeline/, physics/, training/,
+# evaluation/, tests/). Versions are those of the environment that produced the
+# reported results: Python 3.12.10 on Windows 11, CPU only.
+#
+#   py -3.12 -m venv .venv
+#   .venv\Scripts\python -m pip install -r requirements.txt
+#
+# Other versions may work but were not tested; TensorFlow/Keras changes can
+# alter training results.
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2
+tensorflow==2.21.0
+keras==3.15.1
+itur==0.4.0
+requests==2.34.2
+
+# Only for physics/calibrate_lwp_proxy.py (reads ERA5 NetCDF files from the CDS)
+xarray==2026.9.0
+netCDF4==1.7.4

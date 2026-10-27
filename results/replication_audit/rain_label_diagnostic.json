@@ -1,0 +1,91 @@
+{
+  "p838_coefficients_39GHz": {
+    "k_H": 0.42149714668560867,
+    "alpha_H": 0.8743175953120815,
+    "k_V": 0.4057632685339595,
+    "alpha_V": 0.8485502439151044,
+    "k": 0.4136302076097841,
+    "alpha": 0.8616789575482698
+  },
+  "differences": {
+    "max_abs_rain_ours_vs_R1_dB": 8.881784197001252e-16,
+    "max_abs_rain_ours_vs_itur_R2_dB": 0.0,
+    "max_abs_gamma_ours_vs_kR^a": 4.440892098500626e-16,
+    "max_abs_gas_ours_vs_itur_approx_dry_P_with_P453_EF_dB": 0.004877154046189158,
+    "max_abs_gas_effect_of_passing_total_instead_of_dry_P_dB": 0.03283261486582001,
+    "max_abs_cloud_ours_vs_double_debye_dB": 4.440892098500626e-16,
+    "K_l_ours": 1.2326736983651412,
+    "K_l_double_debye": 1.2326736983651412,
+    "max_abs_rain_height_vs_P839": 4.440892098500626e-16
+  },
+  "rain_path_alternative": {
+    "Athens": {
+      "ours_max_dB": 14.818736906135657,
+      "gamma_x_Ls_max_dB": 10.834746624464522,
+      "ours_mean_rainy_hours_dB": 1.4078929342035824,
+      "gamma_x_Ls_mean_rainy_hours_dB": 0.9877996524661049
+    },
+    "Bergen": {
+      "ours_max_dB": 12.393474415768992,
+      "gamma_x_Ls_max_dB": 8.985292920917576,
+      "ours_mean_rainy_hours_dB": 1.3406675935739512,
+      "gamma_x_Ls_mean_rainy_hours_dB": 0.9377957618067414
+    },
+    "Budapest": {
+      "ours_max_dB": 18.834447205849496,
+      "gamma_x_Ls_max_dB": 14.777258560021684,
+      "ours_mean_rainy_hours_dB": 1.778445449179748,
+      "gamma_x_Ls_mean_rainy_hours_dB": 1.2510483581447336
+    },
+    "Chilbolton": {
+      "ours_max_dB": 14.981691441588216,
+      "gamma_x_Ls_max_dB": 10.987216480086603,
+      "ours_mean_rainy_hours_dB": 1.4281306965771499,
+      "gamma_x_Ls_mean_rainy_hours_dB": 1.0008887219735625
+    },
+    "Vigo": {
+      "ours_max_dB": 20.55347699937991,
+      "gamma_x_Ls_max_dB": 16.583488239475912,
+      "ours_mean_rainy_hours_dB": 2.1362428953193313,
+      "gamma_x_Ls_mean_rainy_hours_dB": 1.5082032865650241
+    },
+    "Warsaw": {
+      "ours_max_dB": 15.8833286090108,
+      "gamma_x_Ls_max_dB": 11.841459156307511,
+      "ours_mean_rainy_hours_dB": 1.4638118378687288,
+      "gamma_x_Ls_mean_rainy_hours_dB": 1.0267855078902242
+    }
+  },
+  "rain_rate_needed_for_paper_max": {
+    "Athens": {
+      "rain_rate_for_A_rain=6.7-max(gas+cloud)_mm_h": 1.0961480740370186,
+      "observed_max_rain_mm_h": 7.4,
+      "hours_with_rain_above_that_rate": 406
+    },
+    "Bergen": {
+      "rain_rate_for_A_rain=6.7-max(gas+cloud)_mm_h": 1.2455977988994498,
+      "observed_max_rain_mm_h": 8.9,
+      "hours_with_rain_above_that_rate": 3016
+    },
+    "Budapest": {
+      "rain_rate_for_A_rain=6.7-max(gas+cloud)_mm_h": 0.7016008004002001,
+      "observed_max_rain_mm_h": 8.2,
+      "hours_with_rain_above_that_rate": 1216
+    },
+    "Chilbolton": {
+      "rain_rate_for_A_rain=6.7-max(gas+cloud)_mm_h": 1.0543021510755377,
+      "observed_max_rain_mm_h": 7.5,
+      "hours_with_rain_above_that_rate": 1099
+    },
+    "Vigo": {
+      "rain_rate_for_A_rain=6.7-max(gas+cloud)_mm_h": 0.4983491745872936,
+      "observed_max_rain_mm_h": 11.1,
+      "hours_with_rain_above_that_rate": 5301
+    },
+    "Warsaw": {
+      "rain_rate_for_A_rain=6.7-max(gas+cloud)_mm_h": 0.9466983491745873,
+      "observed_max_rain_mm_h": 6.9,
+      "hours_with_rain_above_that_rate": 739
+    }
+  }
+}

@@ -9,7 +9,7 @@ __pycache__/
 data/raw/
 data/india/
 data/processed/
-results/
+results/*
 
 # Trained models and scalers
 *.keras
@@ -38,3 +38,30 @@ compiler_test.exe
 *.csv
 *.nc
 *.zip
+
+# Local backups of edited files
+backups/
+
+# Generated model artefacts and arrays
+models/paper/
+*.npz
+
+# Curated result snapshot for readers (written by evaluation/export_docs_assets.py)
+!docs/assets/*.csv
+
+# Notebook and test caches, local logs
+.ipynb_checkpoints/
+*.log
+
+# Small result files cited by README.md and docs/ (main causal run, its
+# baselines, the 13 figures, the replication-gap analysis). Everything else in
+# results/ stays local; predictions (*.npz) and scalers (*.pkl) stay ignored
+# by the rules above.
+!results/figures/
+!results/causal_hourly_fig1heads_seed42/
+!results/causal_baseline_audit/
+!results/why_results_differ/
+!results/replication_audit/
+!results/causal_hourly_fig1heads_seed42/training_log.csv
+!results/why_results_differ/*.csv
+!results/replication_audit/*.csv

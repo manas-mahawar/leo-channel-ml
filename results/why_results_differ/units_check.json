@@ -1,0 +1,24 @@
+{
+  "max_abs_diff_stored_y_vs_physics_csv_epl_dB": 8.707373240213201e-07,
+  "max_abs_diff_epl_vs_gas_plus_cloud_plus_rain": 7.105427357601002e-15,
+  "max_abs_diff_persistence_vs_csv_epl_at_origin": 8.707373240213201e-07,
+  "target_mean_dB": 1.2635121373072649,
+  "prediction_mean_dB": 1.2615440147534396,
+  "target_range_dB": [
+    0.4978230595588684,
+    25.629648208618164
+  ],
+  "prediction_range_dB": [
+    0.48887455463409424,
+    8.89600944519043
+  ],
+  "rmse_recomputed_from_csv_targets_dB": 0.8592189091924372,
+  "epl_head": "linear Dense(10), no output scaler; EPL targets fed to the loss in dB (training/train_causal_hourly.py)",
+  "spearman_vs_paper_table7": {
+    "model_rmse": -0.5507824838698261,
+    "persistence_rmse": -0.6667366910003157,
+    "epl_std_full": -0.3478626213914691,
+    "pct_hours_rain_gt0": 0.08696565534786728,
+    "hourly_change_rms": -0.6667366910003157
+  }
+}

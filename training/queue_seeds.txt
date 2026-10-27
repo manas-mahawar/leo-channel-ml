@@ -1,0 +1,11 @@
+# Repeated-seed runs: "<variant> <seed>", trained in order by training/run_queue.py.
+# Seed 42 is the original run of each variant (models/paper/<variant>/).
+# Round 1 first, so a partial queue still gives one extra seed per variant.
+multitask 1
+multitask_fig1heads 1
+epl_only 1
+no_itu 1
+multitask 2
+multitask_fig1heads 2
+epl_only 2
+no_itu 2

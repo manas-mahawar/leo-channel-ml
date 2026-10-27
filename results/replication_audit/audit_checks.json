@@ -1,0 +1,208 @@
+{
+  "paper_consistency": {
+    "table7": {
+      "reported_overall": 0.026,
+      "mean_of_city_averages": 0.0362,
+      "rms_of_city_averages_equal_weights": 0.0629,
+      "median_of_city_averages": 0.011,
+      "hour1_reported_overall": 0.026,
+      "hour1_mean_of_cities": 0.0343,
+      "hour1_rms_of_cities": 0.0611,
+      "max_share_of_squared_error_weight_on_Bergen_for_pooled_rms_0.026": 0.0309,
+      "note": "With equal city sample sizes (10,000 per city), neither the mean (0.036) nor the pooled RMS (0.063) of the city values gives 0.026; a pooled RMS of 0.026 would need Bergen to hold at most about 3 % of the test samples."
+    },
+    "table8": {
+      "reported_averages": [
+        0.911,
+        1.089,
+        0.213
+      ],
+      "mean_true": 0.9113,
+      "mean_pred": 1.0895,
+      "mean_of_listed_abs_errors": 0.2108,
+      "abs_difference_of_means": 0.1782,
+      "rows_where_listed_error_differs_from_abs(pred-true)_by_more_than_0.0015": {},
+      "figure5_and_7_values_differing_from_table8": {
+        "Berlin": {
+          "table8": 0.087,
+          "fig5": 0.097
+        },
+        "Stockholm": {
+          "table8": 0.162,
+          "fig5": 0.171
+        }
+      },
+      "figure5_average_of_bars": 0.2127,
+      "figure7_reported_average": 0.212,
+      "figure7_reported_std": 0.082,
+      "std_of_fig5_errors_population": 0.0802,
+      "std_of_fig5_errors_sample": 0.0845
+    },
+    "figure6": {
+      "reported": {
+        "Southern Europe": 0.277,
+        "Western Europe": 0.177,
+        "Northern Europe": 0.167,
+        "Eastern Europe": 0.14,
+        "Alpine": 0.293
+      },
+      "recomputed_from_fig5_with_inferred_groups": {
+        "Southern Europe": 0.2767,
+        "Western Europe": 0.177,
+        "Northern Europe": 0.1665,
+        "Eastern Europe": 0.14,
+        "Alpine": 0.293
+      },
+      "inferred_groups": {
+        "Southern Europe": [
+          "Rome",
+          "Madrid",
+          "Marseille"
+        ],
+        "Western Europe": [
+          "London",
+          "Paris",
+          "Berlin"
+        ],
+        "Northern Europe": [
+          "Oslo",
+          "Stockholm"
+        ],
+        "Eastern Europe": [
+          "Bucharest"
+        ],
+        "Alpine": [
+          "Davos"
+        ]
+      },
+      "note": "Grouping inferred by matching averages; Berlin must be in Western Europe."
+    },
+    "table9": {
+      "reported": {
+        "EPL only": 0.015,
+        "Multi-task EPL": 0.026,
+        "Weather only": 0.892,
+        "Multi-task weather": 0.761,
+        "time EPL only h": 1.45,
+        "time multi-task h": 1.91,
+        "stated improvements": "40%, 14.7%, +32%"
+      },
+      "multitask_vs_epl_only_relative_change_pct": 73.3,
+      "epl_only_vs_multitask_relative_reduction_pct": 42.3,
+      "weather_improvement_pct": 14.7,
+      "training_time_increase_pct": 31.7,
+      "note": "The table's own EPL numbers show the EPL-only model 42 % better than multi-task; the '40 % improvement' cannot be a multi-task EPL gain as the text states."
+    },
+    "table10": {
+      "rmse_change_pct": 7.7,
+      "mae_change_pct": 33.3
+    },
+    "uncertainty": {
+      "sect4.1_calibration_pct": 99.03,
+      "sect4.1_PICP_pct": 99.23,
+      "table11_pct": 99.03,
+      "note": "Two different coverage values are reported for the trained cities."
+    },
+    "early_stopping": {
+      "text_patience": 6,
+      "table6": "Early stopping 23 epochs",
+      "note": "Table 6 gives an epoch count where the text gives a patience."
+    }
+  },
+  "our_aggregation": {
+    "multitask": {
+      "pooled_rmse_all_windows_and_steps": 0.9360202673478629,
+      "mean_of_city_rmse": 0.9101163479683736,
+      "rms_of_city_rmse": 0.9361333553755833,
+      "mean_of_per_step_rmse": 0.9281228207050937,
+      "city_rmse": {
+        "Athens": 0.6185919582878561,
+        "Bergen": 0.832504795808305,
+        "Budapest": 1.0780872310147587,
+        "Chilbolton": 0.7973098792360721,
+        "Vigo": 1.2983646826867634,
+        "Warsaw": 0.8358395407764863
+      },
+      "test_windows_per_city": {
+        "Athens": 1490,
+        "Bergen": 1488,
+        "Warsaw": 1487,
+        "Vigo": 1486,
+        "Budapest": 1484,
+        "Chilbolton": 1481
+      }
+    },
+    "multitask_fig1heads": {
+      "pooled_rmse_all_windows_and_steps": 0.909687515842936,
+      "mean_of_city_rmse": 0.8893312960335521,
+      "rms_of_city_rmse": 0.9098056311102978,
+      "mean_of_per_step_rmse": 0.898656186259128,
+      "city_rmse": {
+        "Athens": 0.6183847806652861,
+        "Bergen": 0.816398686096193,
+        "Budapest": 1.0563993912260852,
+        "Chilbolton": 0.8043175935882424,
+        "Vigo": 1.2111237826303198,
+        "Warsaw": 0.8293635419951858
+      },
+      "test_windows_per_city": {
+        "Athens": 1490,
+        "Bergen": 1488,
+        "Warsaw": 1487,
+        "Vigo": 1486,
+        "Budapest": 1484,
+        "Chilbolton": 1481
+      }
+    }
+  },
+  "label_distribution": {
+    "paper_visible_max_true_EPL_dB": "about 6.2 (Fig. 3) to 6.7 (Fig. 4)",
+    "our_test_targets": {
+      "Athens": {
+        "max_dB": 16.21092414855957,
+        "p99_dB": 3.915874719619751,
+        "share_targets_above_6.7dB_pct": 0.5100671140939597
+      },
+      "Bergen": {
+        "max_dB": 11.702900886535645,
+        "p99_dB": 6.372471714019775,
+        "share_targets_above_6.7dB_pct": 0.8198924731182796
+      },
+      "Budapest": {
+        "max_dB": 23.01673698425293,
+        "p99_dB": 6.984658632278389,
+        "share_targets_above_6.7dB_pct": 1.0377358490566038
+      },
+      "Chilbolton": {
+        "max_dB": 11.67495059967041,
+        "p99_dB": 6.282462387084961,
+        "share_targets_above_6.7dB_pct": 0.9047940580688724
+      },
+      "Vigo": {
+        "max_dB": 25.629648208618164,
+        "p99_dB": 10.45928955078125,
+        "share_targets_above_6.7dB_pct": 2.328398384925976
+      },
+      "Warsaw": {
+        "max_dB": 16.635194778442383,
+        "p99_dB": 5.902336597442627,
+        "share_targets_above_6.7dB_pct": 0.6186953597848016
+      }
+    },
+    "our_overall_max_dB": 25.629648208618164,
+    "share_windows_with_any_target_above_6.7dB_pct": 2.456258411843876,
+    "share_of_squared_error_from_those_windows_pct": 67.05512192153384,
+    "diagnostic_rmse_main_model_on_windows_max_le_6.7dB": 0.5439756999540214,
+    "note": "Diagnostic only: removing windows by their true value uses the outcome and is not a valid evaluation; it shows how much of our RMSE comes from the label tail."
+  },
+  "full_series_minute_protocol": {
+    "total_test_windows_six_cities": 473484,
+    "paper_fig4_samples_axis": "about 470,000",
+    "pooled_overall_rmse": {
+      "hour steps (+1..+5 h) / linear_extrapolation": 2.2172075841208994,
+      "hour steps (+1..+5 h) / persistence": 0.944797565803263,
+      "minute steps (+1..+5 min) / linear_extrapolation": 0.010732857516834874,
+      "minute steps (+1..+5 min) / persistence": 0.035261846013683026
+    }
+  }
+}

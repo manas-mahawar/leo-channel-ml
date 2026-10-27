@@ -1,0 +1,8 @@
+# One variant per line, trained in order (see training/run_queue.py)
+multitask
+no_itu
+epl_only
+weather_only
+multitask_msl
+minute_multitask
+multitask_fig1heads

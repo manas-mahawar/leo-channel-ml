@@ -1,0 +1,87 @@
+{
+  "model": {
+    "pooled_rmse_dB": 0.8592189112018697,
+    "mean_of_city_rmse_dB": 0.8392969726388717,
+    "rms_of_city_rmse_dB": 0.8592189112018697,
+    "mse_dB2": 0.7382571373669263,
+    "mae_dB": 0.33503663367491504,
+    "median_abs_error_dB": 0.08859637379646301,
+    "abs_overall_mean_bias_dB": 0.0019681225538253785,
+    "mean_abs_city_mean_bias_dB (Table 8 style)": 0.029300876472546505,
+    "rmse_of_horizon_averaged_forecast_dB": 0.6718890470971212,
+    "rmse_divided_by_target_range (min-max scaled)": 0.03418848038714892,
+    "rmse_divided_by_approx_train_std (z-scored)": 0.7340878156802635,
+    "per_city_rmse_dB": {
+      "Athens": 0.5467,
+      "Bergen": 0.8304,
+      "Budapest": 1.043,
+      "Chilbolton": 0.7891,
+      "Vigo": 1.0899,
+      "Warsaw": 0.7367
+    },
+    "per_city_mean_bias_dB": {
+      "Athens": 0.0136,
+      "Bergen": -0.0267,
+      "Budapest": -0.0099,
+      "Chilbolton": 0.0168,
+      "Vigo": -0.0573,
+      "Warsaw": 0.0516
+    },
+    "per_city_rmse_min_max_scaled": {
+      "Athens": 0.034790096042465975,
+      "Bergen": 0.07443705245737621,
+      "Budapest": 0.04643471063064477,
+      "Chilbolton": 0.07123753742833294,
+      "Vigo": 0.04358848574134198,
+      "Warsaw": 0.04566625929900792
+    }
+  },
+  "persistence": {
+    "pooled_rmse_dB": 1.0180595590094381,
+    "mean_of_city_rmse_dB": 0.9969895807662748,
+    "rms_of_city_rmse_dB": 1.0180595590094381,
+    "mse_dB2": 1.0364452656904917,
+    "mae_dB": 0.3460973837452057,
+    "median_abs_error_dB": 0.05502566695213318,
+    "abs_overall_mean_bias_dB": 0.00045532782597419545,
+    "mean_abs_city_mean_bias_dB (Table 8 style)": 0.0005591242615993206,
+    "rmse_of_horizon_averaged_forecast_dB": 0.850872036357662,
+    "rmse_divided_by_target_range (min-max scaled)": 0.04050877932546594,
+    "rmse_divided_by_approx_train_std (z-scored)": 0.8697959369402954,
+    "per_city_rmse_dB": {
+      "Athens": 0.6646,
+      "Bergen": 0.9594,
+      "Budapest": 1.2853,
+      "Chilbolton": 0.9624,
+      "Vigo": 1.216,
+      "Warsaw": 0.8941
+    },
+    "per_city_mean_bias_dB": {
+      "Athens": -0.0,
+      "Bergen": -0.0003,
+      "Budapest": 0.0006,
+      "Chilbolton": 0.0004,
+      "Vigo": 0.0009,
+      "Warsaw": 0.0012
+    },
+    "per_city_rmse_min_max_scaled": {
+      "Athens": 0.04229850361528644,
+      "Bergen": 0.08600277868703722,
+      "Budapest": 0.05722333735770974,
+      "Chilbolton": 0.0868850533293246,
+      "Vigo": 0.048632836988941774,
+      "Warsaw": 0.05542027019416297
+    }
+  },
+  "notes": {
+    "target_range_dB": 25.131825149059296,
+    "approx_train_std_dB": 1.170457938204096,
+    "approx_train_std_basis": "first 30,000 hourly rows per city (about the training period)"
+  },
+  "paper_table7_consistency": {
+    "reported_overall": 0.026,
+    "mean_of_city_values": 0.036166666666666666,
+    "rms_of_city_values": 0.06294574383281738,
+    "median_of_city_values": 0.011000000000000001
+  }
+}
