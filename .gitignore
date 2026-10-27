@@ -28,9 +28,6 @@ results/*
 .DS_Store
 Thumbs.db
 
-# Compiled C++ test artifacts
-compiler_test.exe
-
 # Generated training arrays
 *.npy
 

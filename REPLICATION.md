@@ -7,7 +7,7 @@ doi:10.1186/s13638-026-02667-w.
 > **Note (2026-10-27):** this document covers the earlier **stratified**
 > hourly protocol. The current main result is the strictly causal evaluation
 > in [docs/CAUSAL_HOURLY_MODEL_EXPERIMENT.md](docs/CAUSAL_HOURLY_MODEL_EXPERIMENT.md);
-> overall status: [docs/PROJECT_FINAL_STATUS.md](docs/PROJECT_FINAL_STATUS.md).
+> overview: [README.md](README.md).
 
 > **What is on GitHub.** Many paths below point to local outputs that are
 > not in the repository: `results/paper/` (metrics, tables, predictions and
@@ -26,8 +26,9 @@ paper's numbers appear only as references. All result tables are collected
 in `results/paper/tables.md`.
 
 **Status (2026-10-26): complete, independently audited, with repeated
-seeds; documentation and reproducibility tooling finalised (see
-`STATUS.md`).** Seven variants trained to early stopping (seed 42), plus seeds 1
+seeds; documentation and reproducibility tooling finalised (the dated log
+was in `STATUS.md`, removed in commit `8c4f2a1`; see
+`git show 8f0b551:STATUS.md`).** Seven variants trained to early stopping (seed 42), plus seeds 1
 and 2 for `multitask`, `multitask_fig1heads`, `epl_only` and `no_itu` (15
 runs in all, every one complete). Evaluation, unseen-city study (three
 models), Figures 1-7 plus supporting figures and Tables 7-11 are generated
@@ -719,7 +720,7 @@ table CSVs, `tables.md`, unseen-city summaries and figure freshness.
 ## 11. Files
 
 Created: `config.py`, `run_pipeline.ps1`, `README.md`, `REPLICATION.md`,
-`STATUS.md`, `physics/calibrate_lwp_proxy.py`,
+`STATUS.md` (since removed), `physics/calibrate_lwp_proxy.py`,
 `data_pipeline/build_paper_dataset.py`, `data_pipeline/build_minute_dataset.py`,
 `data_pipeline/download_pressure_msl.py`, `training/train_paper_model.py`,
 `training/run_queue.py`, `training/queue.txt`,
@@ -733,7 +734,7 @@ Created: `config.py`, `run_pipeline.ps1`, `README.md`, `REPLICATION.md`,
 `physics/lwp_proxy_calibration.json` (fitted coefficients, moved here from
 `results/paper/` so a fresh clone can build the labels), `docs/`
 (report, interview notes, references, `assets/` result snapshot),
-`GITHUB_CHECKLIST.md`.
+`GITHUB_CHECKLIST.md` (since removed).
 
 Backups: `backups/2026-10-23/` (original prototype files, REPLICATION v1),
 `backups/2026-10-24/` (results and docs just before the final evaluation;
@@ -757,12 +758,10 @@ and prototype models in `training/`, `models/` and `data/processed/`.
 
 ### Version control
 
-The complete list of files intended for version control, the excluded
-artefacts and why, licensing questions and the exact commands to stage
-them later are in [GITHUB_CHECKLIST.md](GITHUB_CHECKLIST.md). Generated
-results are not tracked except the curated snapshot in `docs/assets/` and the
-small result files listed there (causal metrics, the 13 figures, audit outputs).
-Nothing has been committed or pushed.
+What is tracked is defined by `.gitignore`. Generated results are not
+tracked except the curated snapshot in `docs/assets/` and the small result
+files cited by the docs (causal metrics, the 13 figures, audit outputs).
+Publication history is in `git log`.
 
 ---
 

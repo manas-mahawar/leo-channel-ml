@@ -8,7 +8,7 @@ All numbers come from files in this repository (`results/paper/`, snapshot in
 > protocol. The current main result is the strictly causal evaluation
 > (RMSE 0.859 vs persistence 1.018 dB on a different test set):
 > [CAUSAL_HOURLY_MODEL_EXPERIMENT.md](CAUSAL_HOURLY_MODEL_EXPERIMENT.md),
-> [PROJECT_FINAL_STATUS.md](PROJECT_FINAL_STATUS.md).
+> [README.md](../README.md).
 
 ## Abstract
 

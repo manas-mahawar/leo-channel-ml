@@ -119,15 +119,14 @@ Details: **[docs/WHY_RESULTS_DIFFER_FROM_PAPER.md](docs/WHY_RESULTS_DIFFER_FROM_
 
 | Document | Purpose |
 |---|---|
-| [docs/PROJECT_FINAL_STATUS.md](docs/PROJECT_FINAL_STATUS.md) | What is complete, verified and unresolved |
 | [docs/PROJECT_EXPLAINED_FROM_SCRATCH.md](docs/PROJECT_EXPLAINED_FROM_SCRATCH.md) | Full explanation for learning |
 | [docs/VISUAL_RESULTS_GUIDE.md](docs/VISUAL_RESULTS_GUIDE.md) | Every figure, its key result and how to read it |
-| [docs/FINALIZATION_CHECKLIST.md](docs/FINALIZATION_CHECKLIST.md) | Pre-submission checklist with commands |
 | [docs/CAUSAL_HOURLY_MODEL_EXPERIMENT.md](docs/CAUSAL_HOURLY_MODEL_EXPERIMENT.md) | The main experiment: audit, configuration, results |
 | [docs/CAUSAL_FORECASTING_INVESTIGATION.md](docs/CAUSAL_FORECASTING_INVESTIGATION.md) | Why the causal protocol was chosen; leakage analysis |
 | [docs/WHY_RESULTS_DIFFER_FROM_PAPER.md](docs/WHY_RESULTS_DIFFER_FROM_PAPER.md) | Ranked explanation of the gap to 0.026 dB |
 | [docs/REPLICATION_GAP_AUDIT.md](docs/REPLICATION_GAP_AUDIT.md), [docs/RAIN_LABEL_DIAGNOSTIC.md](docs/RAIN_LABEL_DIAGNOSTIC.md) | Paper-vs-code audit; check of the rain labels |
 | [docs/FINAL_RESEARCH_REPORT.md](docs/FINAL_RESEARCH_REPORT.md), [REPLICATION.md](REPLICATION.md) | Earlier full report and methodology (stratified protocol) |
+| [docs/JANUARY_PROXY_EXPERIMENT.md](docs/JANUARY_PROXY_EXPERIMENT.md) | First prototype (Athens, January 2020); kept as evidence, not comparable |
 
 ## Setup (Windows, Python 3.12)
 
@@ -205,8 +204,12 @@ version. `--export-docs` also replaces the five PNGs in
   determinism, seed 42). Other hardware or library versions may give
   different numbers.
 * **LWP proxy:** re-fitting it needs ERA5 files from the Copernicus Climate
-  Data Store (free account). Otherwise the committed coefficients in
-  `physics/lwp_proxy_calibration.json` are used.
+  Data Store (free account, `~/.cdsapirc`) in `data\raw\era5\`. The committed
+  fit used Athens 2020-2024 and Bergen 2020-01 to 2021-02, downloaded one
+  month at a time with `data_pipeline\build_dataset.py` (for example
+  `--city Athens --year 2020 --start-month 1 --end-month 12`). Without these
+  files, the committed coefficients in `physics/lwp_proxy_calibration.json`
+  are used.
 * **Laptops:** keep it plugged in with the lid open during training, because
   standby pauses training.
 
@@ -243,10 +246,15 @@ pool them with the causal results.
 | `results/` | Generated outputs. Only the small files cited by the docs are in Git: `figures/` (13 PNG + PDF, manifest), the main run's metrics and config, baseline metrics, and the replication-gap analysis. Predictions stay local |
 | `models/`, `data/` | Checkpoints and data (git-ignored) |
 
-A few scripts from the project's first prototype (an ERA5/CDS download and a
-single-city LSTM, committed before this pipeline) remain in `data_pipeline/`,
-`physics/`, `models/` and `training/`. The pipeline above does not use them,
-and they are not maintained.
+Two older groups of scripts are not part of the pipeline above:
+* **ERA5 download from the Copernicus CDS** (`data_pipeline/download_era5.py`,
+  `prepare_era5_weather.py`, `build_dataset.py`). They are needed only to
+  re-fit the LWP proxy (see above).
+* **The first prototype** (Athens, January 2020, proxy labels): the scripts
+  listed in [docs/JANUARY_PROXY_EXPERIMENT.md](docs/JANUARY_PROXY_EXPERIMENT.md),
+  plus `models/lstm_baseline.py`, `models/multitask_lstm.py`,
+  `training/prepare_data.py` and `training/prepare_multitask_data.py`. They are
+  not maintained.
 
 ## Data and attribution
 
@@ -254,5 +262,4 @@ Weather data by [Open-Meteo.com](https://open-meteo.com/) (CC BY 4.0), based on
 ERA5 reanalysis (Copernicus Climate Change Service). ITU-R models via ITU-Rpy
 (`itur`). The paper is cited above and licensed CC BY-NC-ND 4.0; its PDF and
 figures are not included here. Full references: [docs/REFERENCES.md](docs/REFERENCES.md).
-No licence has yet been chosen for this repository's own code (see
-[GITHUB_CHECKLIST.md](GITHUB_CHECKLIST.md)).
+No licence has yet been chosen for this repository's own code.

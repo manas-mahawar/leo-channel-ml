@@ -1,7 +1,7 @@
 # Resume bullet options
 
 Pick one version. Each bullet is supported by the repository's verified
-results (`docs/PROJECT_FINAL_STATUS.md`). Do not describe the work as
+results (`README.md`, `docs/CAUSAL_HOURLY_MODEL_EXPERIMENT.md`). Do not describe the work as
 published, deployed, an exact reproduction, or validated on measured satellite
 data.
 

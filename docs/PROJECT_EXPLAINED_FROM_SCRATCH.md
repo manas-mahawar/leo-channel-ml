@@ -365,7 +365,8 @@ log-variance is clipped to [-12, 6] for numerical safety.
 * TensorFlow op determinism is on, and the library versions are pinned in
   `requirements.txt`.
 * On this machine, an earlier determinism check reproduced training losses
-  to 1e-7 (`STATUS.md`). Other hardware or library versions may differ.
+  to 1e-7 (recorded in the former `STATUS.md`: `git show 8f0b551:STATUS.md`).
+  Other hardware or library versions may differ.
 * Only one seed was trained for this protocol.
 
 ---
