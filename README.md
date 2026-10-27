@@ -120,8 +120,7 @@ Details: **[docs/WHY_RESULTS_DIFFER_FROM_PAPER.md](docs/WHY_RESULTS_DIFFER_FROM_
 | Document | Purpose |
 |---|---|
 | [docs/PROJECT_FINAL_STATUS.md](docs/PROJECT_FINAL_STATUS.md) | What is complete, verified and unresolved |
-| [docs/PROJECT_EXPLAINED_FROM_SCRATCH.md](docs/PROJECT_EXPLAINED_FROM_SCRATCH.md) | Full explanation for learning and viva preparation |
-| [docs/PRESENTATION_GUIDE.md](docs/PRESENTATION_GUIDE.md) | 8-10 minute talk: slides, speaker notes, questions |
+| [docs/PROJECT_EXPLAINED_FROM_SCRATCH.md](docs/PROJECT_EXPLAINED_FROM_SCRATCH.md) | Full explanation for learning |
 | [docs/VISUAL_RESULTS_GUIDE.md](docs/VISUAL_RESULTS_GUIDE.md) | Every figure, its key result and how to read it |
 | [docs/FINALIZATION_CHECKLIST.md](docs/FINALIZATION_CHECKLIST.md) | Pre-submission checklist with commands |
 | [docs/CAUSAL_HOURLY_MODEL_EXPERIMENT.md](docs/CAUSAL_HOURLY_MODEL_EXPERIMENT.md) | The main experiment: audit, configuration, results |
