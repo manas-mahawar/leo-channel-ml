@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import itur
 
-INPUT_FILE = "data/raw/athens_era5_january.csv"
-OUTPUT_FILE = "data/raw/athens_cloud_january.csv"
+INPUT_FILE = "data/processed/athens_2020_01_weather.csv"
+OUTPUT_FILE = "data/processed/athens_2020_01_cloud.csv"
 
 FREQUENCY_GHZ = 39.0
 ELEVATION_DEG = 30.0

@@ -1,7 +1,7 @@
 import pandas as pd
 
-INPUT_FILE = "data/raw/athens_physics_january.csv"
-OUTPUT_FILE = "data/processed/athens_features_january.csv"
+INPUT_FILE = "data/processed/athens_2020_01_physics.csv"
+OUTPUT_FILE = "data/processed/athens_2020_01_features.csv"
 
 ELEVATION_DEG = 30.0
 ROLLING_WINDOW = 60

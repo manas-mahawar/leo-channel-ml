@@ -1,45 +1,62 @@
+
 import numpy as np
 import pandas as pd
+from pathlib import Path
 
-INPUT_FILE = "data/processed/athens_features_january.csv"
-PHYSICS_FILE = "data/raw/athens_physics_january.csv"
+DATA_DIR = Path("data/processed")
+
+FEATURE_FILE = DATA_DIR / "athens_2020_01_features.csv"
+TARGET_FILE = DATA_DIR / "athens_2020_01_targets.csv"
 
 SEQUENCE_LENGTH = 60
 PREDICTION_HORIZON = 5
 
-OUTPUT_X = "data/processed/athens_X_january.npy"
-OUTPUT_Y = "data/processed/athens_y_january.npy"
+OUTPUT_X = DATA_DIR / "athens_2020_01_X_proxy.npy"
+OUTPUT_Y = DATA_DIR / "athens_2020_01_y_proxy.npy"
 
-print("Loading data...")
 
-features = pd.read_csv(INPUT_FILE)
-physics = pd.read_csv(PHYSICS_FILE)
+print("Loading features and targets...")
 
-# Make sure both datasets have the same chronological order
-physics["valid_time"] = pd.to_datetime(physics["valid_time"])
+features = pd.read_csv(FEATURE_FILE)
+targets = pd.read_csv(TARGET_FILE)
 
-physics = physics.sort_values("valid_time").reset_index(drop=True)
-features = features.reset_index(drop=True)
+# Align observations by timestamp before creating sequences.
+physics_time = pd.to_datetime(targets["valid_time"])
+feature_time = pd.to_datetime(pd.read_csv(DATA_DIR / "athens_2020_01_physics.csv")["valid_time"])
 
-X_data = features.values
-y_data = physics["total_attenuation_dB"].values
+# The feature CSV has no timestamp column, so verify its row count
+# against the timestamped physics dataset.
+if len(features) != len(feature_time):
+    raise ValueError("Feature and physics row counts do not match.")
+
+if not physics_time.equals(feature_time):
+    raise ValueError("Feature and target timestamps are not aligned.")
+
+X_data = features.to_numpy(dtype=np.float32)
+y_data = targets["total_attenuation_proxy_dB"].to_numpy(dtype=np.float32)
+
+if not np.isfinite(X_data).all() or not np.isfinite(y_data).all():
+    raise ValueError("Non-finite values found in features or targets.")
 
 print("Feature data shape:", X_data.shape)
 print("Target shape:", y_data.shape)
 
-# Create sliding-window sequences
-# X = previous 60 observations
-# y = next 5 observations
-
 X = []
 y = []
 
-for i in range(len(X_data) - SEQUENCE_LENGTH - PREDICTION_HORIZON + 1):
+for i in range(
+    len(X_data) - SEQUENCE_LENGTH - PREDICTION_HORIZON + 1
+):
     X.append(X_data[i:i + SEQUENCE_LENGTH])
-    y.append(y_data[i + SEQUENCE_LENGTH:i + SEQUENCE_LENGTH + PREDICTION_HORIZON])
+    y.append(
+        y_data[
+            i + SEQUENCE_LENGTH:
+            i + SEQUENCE_LENGTH + PREDICTION_HORIZON
+        ]
+    )
 
-X = np.array(X)
-y = np.array(y)
+X = np.asarray(X, dtype=np.float32)
+y = np.asarray(y, dtype=np.float32)
 
 print("\nSequence shapes:")
 print("X:", X.shape)
