@@ -19,5 +19,7 @@ itur==0.4.0
 requests==2.34.2
 
 # Only for physics/calibrate_lwp_proxy.py (reads ERA5 NetCDF files from the CDS)
+# and the ERA5 download scripts in data_pipeline/ (need a CDS account)
 xarray==2026.9.0
 netCDF4==1.7.4
+cdsapi==0.7.7
